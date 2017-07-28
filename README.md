@@ -12,13 +12,11 @@ The typical process went as so:
 1) Printer count reaches 6,000 inches.
 2) What's Up Gold detects the printer reached the limit and submits a helpdesk ticket.
 3) IT member picks up the ticket and services the printer
-4) IT member grabs the configuration text from the printer's web page.
-5) IT member records the configuration text in the helpdesk ticket.
-6) IT member runs a batch file to reset the printer count
-7) IT member, again, grabs the new configuration text from the printer's web page. This time it should read zero.
-8) IT member records new configuration text in the helpdesk ticket.
-9) IT member provides the basic 'Cleaned Zebra Printer per Manufacturer's Manual' ticket solution text.
-10) IT member closes the ticket.
+4) IT member grabs the configuration text from the printer's web page and records the configuration text in the helpdesk ticket.
+5) IT member runs a batch file to reset the printer count
+6) IT member, again, grabs the new configuration text from the printer's web page and records new configuration text in the helpdesk ticket. This time it should read zero.
+7) IT member provides the basic 'Cleaned Zebra Printer per Manufacturer's Manual' ticket solution text.
+8) IT member closes the ticket.
 
 The solution:
 
