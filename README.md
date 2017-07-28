@@ -1,6 +1,8 @@
 # LSCPrintReset
 An Electron based printer count resetter for Zebra printers within Linemaster Switch Corporation.
 
+![alt text](https://github.com/RDumais/LSCPrintReset/blob/master/img/zebralogo2.png)
+
 
 The Issue:
 
