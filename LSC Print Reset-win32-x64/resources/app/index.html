@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Linemaster Print Count Resetter</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.js">
+	</script>
+	<script>window.jQuery = window.$ = module.exports</script>
+	<link href="node_modules\bootstrap\dist\css\bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="css\master.css" rel="stylesheet" type="text/css">
+	<script src="main.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+	</script>
+</head>
+<body>
+	<div class="col-xs-12" id="wrapper">
+		<!-- INSTRUCTION MODAL FOR INSTRUCTIONS -->
+		<input data-target="#infoModal" data-toggle="modal" src="img/info.png" type="image">
+		<img src='img/close.png' onclick="closeWindow()"/>
+		<img src='img/minimize.png' onclick="minimizeWindow()"/>
+		<div class="row">
+			<div class="col-xs-offset-3 col-xs-6" id="headerText"><img alt="" src="img/zebralogo2.png"></div>
+			<div class="col-xs-offset-4 col-xs-4 text-left"></div>
+		</div>
+		<div id="resetButtons">
+			<div class="row">
+				<h2>Clean Printer</h2>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getSixHundredData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="cpSixHundred()" type="button">
+					<h3>1-NPL-LP-1</h3>
+					<h4>110Xi4-600dpi</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(sixHundredUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getThreeHundredData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="cpThreeHundred()" type="button">
+					<h3>1-NPL-LP-2</h3>
+					<h4>110Xi4-300dpi</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(threeHundredUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getshpOneData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="cpshpOne()" type="button">
+					<h3>1-SHP-LP-1</h3>
+					<h4>Zebra GK420d</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(shpOneUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getshpTwoData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="cpshpTwo()" type="button">
+					<h3>1-SHP-LP-2</h3>
+					<h4>ZTC GK420d</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(shpTwoUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+			</div>
+			<div class="row">
+				<h2>Replace Printhead</h2>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getSixHundredData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="phSixHundred()" type="button">
+					<h3>1-NPL-LP-1</h3>
+					<h4>110Xi4-600dpi</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(sixHundredUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getThreeHundredData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="phThreeHundred()" type="button">
+					<h3>1-NPL-LP-2</h3>
+					<h4>110Xi4-300dpi</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(threeHundredUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getshpOneData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class=" col-xs-4">
+					<button class="btn-primary" onclick="phshpOne()" type="button">
+					<h3>1-SHP-LP-1</h3>
+					<h4>Zebra GK420d</h4></button>
+				</div>
+				<div class="col-xs-2" id="marginbottom">
+					<button class="btn-primary" onclick="shell.openExternal(shpOneUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+				<div class="col-xs-2 col-xs-offset-2">
+					<button class="btn-primary" onclick="getshpTwoData()" type="button"><img alt="" src="img/copy.png"></button>
+				</div>
+				<div class="col-xs-4">
+					<button class="btn-primary" onclick="phshpTwo()" type="button">
+					<h3>1-SHP-LP-2</h3>
+					<h4>Zebra GK420d</h4></button>
+				</div>
+				<div class="col-xs-2">
+					<button class="btn-primary" onclick="shell.openExternal(shpTwoUrl)" type="button"><img alt="" src="img/link.png"></button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-offset-4 col-xs-4">
+					<button class="btn-primary" onclick="copyToClipboard()" style="height:50%;" type="button">
+					<h3>Copy Solution Text</h3></button>
+				</div>
+			</div>
+			<textarea id="test" name=""></textarea>
+	        <!-- MODAL FOR INSTRUCTIONS -->
+			<div aria-labelledby="myModalLabel" class="modal fade" id="infoModal" role="dialog" tabindex="-1">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="myModalLabel">Instructions</h4><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+						</div>
+						<div class="modal-body">
+							<ul class='text-left'>
+								<li>The first column will copy the printer configurations to your clipboard.</li>
+								<li>The second column runs a batch script to reset the printer's inch count.</li>
+								<li>The third column will open the printer's webpage.</li>
+								<li>The 'Copy Solution Text' button will copy the default ticket solution text to your clipboard. <small>e.g. 'Cleaned Zebra per Manufacturer's Manual'</small></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+	        <!-- MODAL FOR LOADING SPINNER -->
+			<div aria-labelledby="myModalLabel" class="modal fade" id="loadModal" role="dialog" tabindex="-1">
+				<div class="modal-dialog" role="document">
+					<div style="margin-top:50vh;"><img src='img/loader.gif'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	        <!-- START JAVASCRIPT VARIABLES -->
+			const remote = require('electron').remote;
+			var networkPath = "\\\\LSC-SA-NAS1\\Departments\\Information Technology\\Software\\Zebra Label Printer Reset Counters\\",
+	        request = require("request"),
+	        cheerio = require("cheerio"),
+	        sixHundredUrl = "http://172.16.60.110/config.html", //Variable for 600DPI
+	        threeHundredUrl = "http://172.16.60.111/config.html", //Variable for 300DPI
+	        shpOneUrl = "http://172.16.60.93/config.html", //Variable for 1-SHP-LP-1
+	        shpTwoUrl = "http://172.16.60.92/config.html", //Variable for 1-SHP-LP-2  
+			solutionText = "Cleaned Zebra Printer per Manufacturer's Manual"; //Variable for ticket solution
+	        <!-- END JAVASCRIPT VARIABLES -->
+			
+	        <!-- INITIAL LOADING SPINNER, NECESSARY FOR PROGRAM TO LOAD BEFORE USER TOUCHES -->
+			$(window).on('load',function(){
+			$('#loadModal').modal('show');
+			setTimeout(function() {
+			$('#loadModal').modal('hide');
+			}, 5000);
+			});
+
+			function minimizeWindow(){
+			var window = remote.getCurrentWindow();
+			window.minimize(); 
+			}
+  
+			function closeWindow(){
+			var window = remote.getCurrentWindow();
+			window.close();
+			}
+
+	      //Clean printer on 600DPI
+	      function cpSixHundred() {
+	        shell.openItem(networkPath + '1-NPL-TXT-1_ResetCounter_2_PrintLengthReached.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Clean printer on 300DPI
+	      function cpThreeHundred() {
+	        shell.openItem(networkPath + '1-NPL-TXT-2_ResetCounter_2_PrintLengthReached.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Clean printer 1-SHP-LP-1
+	      function cpshpOne() {
+	        shell.openItem(networkPath + '1-SHP-LP-1_ResetCounter_2_PrintLengthReached.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Clean printer 1-SHP-LP-2
+	      function cpshpTwo() {
+	        shell.openItem(networkPath + '1-SHP-LP-2_ResetCounter_2_PrintLengthReached.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Printhead replaced on 600DPI
+	      function phSixHundred() {
+	        shell.openItem(networkPath + '1-NPL-TXT-1_ResetCounter_1_PrintHeadReplaced.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Printhead replaced on 300DPI
+	      function phThreeHundred() {
+	        shell.openItem(networkPath + '1-NPL-TXT-2_ResetCounter_1_PrintHeadReplaced.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Printhead replaced on 1-SHP-LP-1
+	      function phshpOne() {
+	        shell.openItem(networkPath + '1-SHP-LP-1_ResetCounter_1_PrintHeadReplaced.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	      //Printhead replaced on 1-SHP-LP-2
+	      function phshpTwo() {
+	        shell.openItem(networkPath + '1-SHP-LP-2_ResetCounter_1_PrintHeadReplaced.bat')
+	        if (err) {
+	          // Ooops.
+	          // console.log(stderr);
+	          return console.log(err);
+	        }
+
+	        // Done.
+	        console.log(stdout);
+	      };
+
+	   //Functions to grab <pre> data from the printer's configuration page
+
+	      function getThreeHundredData() {
+	        request(threeHundredUrl, function(error, response, body) {
+	          if (!error) {
+	            var $ = cheerio.load(body),
+	              threeHundredData = $("pre").html();
+	            console.log(threeHundredData);
+	            document.getElementById("test").value = threeHundredData;
+	            const {
+	              clipboard
+	            } = require('electron')
+	            clipboard.writeText(document.getElementById("test").value);
+	            document.getElementById("test").value = "";
+	          } else {
+	            console.log("We’ve encountered an error: " + error);
+	          }
+	        });
+	      }
+
+	      function getSixHundredData() {
+	        request(sixHundredUrl, function(error, response, body) {
+	          if (!error) {
+	            var $ = cheerio.load(body),
+	              sixHundredData = $("pre").html();
+	            console.log(sixHundredData);
+	            document.getElementById("test").value = sixHundredData;
+	            const {
+	              clipboard
+	            } = require('electron')
+	            clipboard.writeText(document.getElementById("test").value);
+	            document.getElementById("test").value = "";
+	          } else {
+	            console.log("We’ve encountered an error: " + error);
+	          }
+	        });
+	      }
+
+	      function getshpOneData() {
+	        request(shpOneUrl, function(error, response, body) {
+	          if (!error) {
+	            var $ = cheerio.load(body),
+	              shpOneData = $("pre").html();
+	            console.log(shpOneData);
+	            document.getElementById("test").value = shpOneData;
+	            const {
+	              clipboard
+	            } = require('electron')
+	            clipboard.writeText(document.getElementById("test").value);
+	            document.getElementById("test").value = "";
+	          } else {
+	            console.log("We’ve encountered an error: " + error);
+	          }
+	        });
+	      }
+
+	      function getshpTwoData() {
+	        request(shpTwoUrl, function(error, response, body) {
+	          if (!error) {
+	            var $ = cheerio.load(body),
+	              shpTwoData = $("pre").html();
+	            console.log(shpTwoData);
+	            document.getElementById("test").value = shpTwoData;
+	            const {
+	              clipboard
+	            } = require('electron')
+	            clipboard.writeText(document.getElementById("test").value);
+	            document.getElementById("test").value = "";
+	          } else {
+	            console.log("We’ve encountered an error: " + error);
+	          }
+	        });
+	      }
+	      
+	   <!-- Copy 'Cleaned Zebra per Manufacturer's Manual' to clipboard for ticket's solution field -->
+	   function copyToClipboard(text) {
+	      const {clipboard} = require('electron')
+	            console.log("Writing" + solutionText + "to clipboard...");
+	            clipboard.writeText(solutionText);
+	            console.log("Success.");
+	   }
+	</script>
+</body>
+</html>

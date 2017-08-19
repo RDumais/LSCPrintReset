@@ -1,0 +1,28 @@
+{
+  "name": "electron-quick-start",
+  "productName": "LSC Print Reset",
+  "version": "1.0.0",
+  "description": "An Electron application to support Zebra Printer print count reset.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=img/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"LSC Print Reset\""
+  },
+  "repository": "https://github.com/RDumais/LSCPrintReset",
+  "author": "Ryan Dumais",
+  "license": "CC0 1.0",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.1",
+    "electron": "^1.6.11",
+    "electron-packager": "^8.7.2",
+    "jquery": "^3.2.1",
+    "request": "^2.81.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "electron-debug": "^1.2.0",
+    "jquery": "^3.2.1",
+    "request": "^2.81.0",
+    "cheerio": "^1.0.0-rc.1"
+  }
+}
