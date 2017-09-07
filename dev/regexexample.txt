@@ -1,0 +1,23 @@
+var regex = /((\d.\d+) CM) *RESET CNTR2/;
+var currentCount = $("pre").html();
+var captureGroups = regex.exec(currentCount);
+console.log(captureGroups[1]);
+
+
+var regex = /((\d+?.\d+) IN) *RESET CNTR2/;
+var currentCount = $("pre").html();
+var captureGroups = regex.exec(currentCount);
+console.log(captureGroups[1]);
+
+var str1 = "a,d,k";
+str1 = str1.replace (/,/g, "");
+
+var regex = /((\d+?\d+) IN) *RESET CNTR2/;
+var currentCount = $("pre").html();
+var captureGroups = regex.exec(currentCount);
+console.log(captureGroups);
+
+var regex = /((\d+.?\d+) IN) *RESET CNTR2/;
+var currentCount = $("pre").html();
+var captureGroups = regex.exec(currentCount);
+console.log(captureGroups);
