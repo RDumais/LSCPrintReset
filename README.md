@@ -23,8 +23,10 @@ The typical process went as so:
 The solution was created to reduce the amount of time navigating to the printer's webpage, copying the configuration text, and typing solution text into the helpdesk ticket. The traditional method of running the batch files also caused confusion due to bad naming conventions. This program will provide a GUI interface that will allow the user to grab the configuration text from the webpage and copy the text to the clipboard with a push of the button. The GUI also allows the user to run the batch file and navigate to the printer's webpage (if needed) with other controls.
 
 **Screenshots:**
+
+Short demo:
+![alt text](https://github.com/RDumais/LSCPrintReset/blob/master/img/LSCPrintResetDEMO.gif)
+
 The program's main screen:
 ![alt text](https://github.com/RDumais/LSCPrintReset/blob/master/img/Screenshot.png)
 
-The program's instruction modal:
-![alt text](https://github.com/RDumais/LSCPrintReset/blob/master/img/Screenshot2.png)
